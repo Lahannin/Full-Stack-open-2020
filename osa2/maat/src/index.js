@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
 import React, { useState, useEffect } from 'react'
 import Countries from './Components/Countries'
 import Filter from './Components/Filter'
@@ -53,4 +53,4 @@ const App = () => {
 
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))

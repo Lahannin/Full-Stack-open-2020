@@ -1,15 +1,19 @@
 import React from 'react'
 
-const Notification = ({ message, style }) => {
+
+const Notification = ({message, style}) => {
     if (message === null) {
-      return null
+      return null  
     }
   
+
     return (
       <div className={style}>
         {message}
-      </div>
+      </div>  
+      
     )
   }
+
 
   export default Notification

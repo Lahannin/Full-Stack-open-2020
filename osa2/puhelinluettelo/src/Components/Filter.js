@@ -1,16 +1,18 @@
 import React from 'react'
 
 
-const Filter = ({ value, onChange }) =>{
+
+const Filter = ({value, onChange}) =>{ 
     return (
           <div>
-             Find:
+             Find: 
               <input
                   value={value}
                   onChange={onChange}
-            />
-          </div>
+            /> 
+          </div>   
     )
 }
+
 
 export default Filter

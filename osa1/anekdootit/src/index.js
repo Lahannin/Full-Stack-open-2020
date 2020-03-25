@@ -45,7 +45,7 @@ const App = (props) => {
   const max = points.reduce((a,b) => {
     return Math.max(a,b)}) 
 
-  const popular = points.indexOf(max);
+  const popular = points.indexOf(max)
 
   return (
     <div>

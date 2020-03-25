@@ -1,7 +1,8 @@
 import React from 'react'
 
+ 
 const PersonForm = ({submitForm, name, onClickName, phone, onClickPhone}) => {
-  return (
+  return ( 
     <form onSubmit={submitForm}>
       <div>
         name: <input value={name} required 
@@ -15,7 +16,8 @@ const PersonForm = ({submitForm, name, onClickName, phone, onClickPhone}) => {
         <button type="submit">add</button>
       </div>
     </form>
-  )
-}
+  ) 
+}  
+
 
 export default PersonForm
