@@ -19,7 +19,7 @@ const App = () => {
   const [author, setAuthor] = useState("");
   const [url, setUrl] = useState("");
   const [style, setStyle] = useState('') 
-  const [loginVisible, setLoginVisible] = useState(false)
+  
  
 
   const handleLogin = async (event) => {
@@ -118,7 +118,7 @@ const App = () => {
   )
 
   const createBlogForm = () => (
-    <Togglable buttonLabel="A new blog">
+    <Togglable buttonLabel="New blog">
     
       
       <h2>Create new</h2>
@@ -164,10 +164,10 @@ const App = () => {
       {user === null ?
         loginForm() :
         <div>
-          <p>{user.name} logged in</p>
+          <p>{user.name} logged in
           <button onClick={handleLogout}> logout</button>
-  
-        <br></br>
+          </p>
+
 
           {createBlogForm()} 
 
