@@ -3,6 +3,7 @@ import Blog from './components/Blog'
 import Notification from './components/Notification'
 import blogService from './services/blogs'
 import loginService from './services/login'
+import Togglable from './components/Togglable'
 import './index.css'
 
 
@@ -18,6 +19,7 @@ const App = () => {
   const [author, setAuthor] = useState("");
   const [url, setUrl] = useState("");
   const [style, setStyle] = useState('') 
+  const [loginVisible, setLoginVisible] = useState(false)
  
 
   const handleLogin = async (event) => {
@@ -116,9 +118,12 @@ const App = () => {
   )
 
   const createBlogForm = () => (
-    <form onSubmit={handleNewBlog}>
-      <div>
+    <Togglable buttonLabel="A new blog">
+    
+      
       <h2>Create new</h2>
+      <form onSubmit={handleNewBlog}>
+      <div>
         title
           <input
           type="text"
@@ -146,7 +151,8 @@ const App = () => {
         />
       </div>
       <button type="submit">create</button>
-    </form>      
+    </form>    
+    </Togglable>  
   )
 
   
