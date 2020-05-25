@@ -23,14 +23,14 @@ const Blog = ({ blog, handleLike, handleRemove, user }) => {
         {blog.title} {blog.author}
         <button onClick={() => setBlogInfo(!blogInfo)}>view</button>
       </div>
-      <div style={showWhenExpanded} className="fullBlog">
+      <div style={showWhenExpanded} id='fullinfo' className="fullBlog">
         <p>URL: {blog.url}</p>
         <p>Likes: {blog.likes} <button onClick={handleLike}>like</button>
         </p>
-        <p>Added by {blog.user && blog.user.name} </p>
-        {user.username === (blog.user && blog.user.username) ? (
+        <p>Added by {blog.user.name} </p>
+        {blog.user.name === user.name ?
           <button onClick={handleRemove}>remove</button>
-        ) : null}
+          : null}
       </div>
     </div>
   )
