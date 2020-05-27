@@ -25,12 +25,11 @@ const Blog = ({ blog, handleLike, handleRemove, user }) => {
       </div>
       <div style={showWhenExpanded} id='fullinfo' className="fullBlog">
         <p>URL: {blog.url}</p>
-        <p>Likes: {blog.likes} <button onClick={handleLike}>like</button>
-        </p>
-        <p>Added by {blog.user.name} </p>
-        {blog.user.name === user.name ?
-          <button onClick={handleRemove}>remove</button>
-          : null}
+        <p>Likes: {blog.likes} <button onClick={handleLike}>like</button></p>
+        <p>added by {blog.user.name}
+          {blog.user.name === user.name ?
+            <button onClick={handleRemove}>remove</button>
+            : null}</p>
       </div>
     </div>
   )
