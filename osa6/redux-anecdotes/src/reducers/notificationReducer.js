@@ -4,7 +4,7 @@ const notificationReducer = (state = [] , action) => {
         return action.data.message
       case 'SET_VOTENOTIFICATION':
         return action.data.message
-      case "DELETE_NOTIFICATION":
+      case 'DELETE_NOTIFICATION':
             return null;
         default:
             return state;
@@ -29,7 +29,7 @@ export const handleVoteNotification = (message) => {
     })
     setTimeout(() => {
         dispatch({
-            type: "DELETE_NOTIFICATION"
+            type: 'DELETE_NOTIFICATION'
         })
     }, 5000)
     }}

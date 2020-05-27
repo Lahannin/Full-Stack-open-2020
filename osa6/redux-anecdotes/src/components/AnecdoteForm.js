@@ -5,6 +5,7 @@ import { handleNotification } from '../reducers/notificationReducer'
 
 
 
+
 const AnecdoteForm = (props) => {  
     const dispatch = useDispatch()
     const addAnecdote = (event) => {
@@ -20,8 +21,8 @@ const AnecdoteForm = (props) => {
         <div>
           <h2>Create Anecdote</h2>
           <form onSubmit={addAnecdote}>
-            <input name="anecdote" />
-            <button type="submit">add</button>
+            <input name='anecdote' />
+            <button type='submit'>add</button>
           </form>
         </div>
     )
