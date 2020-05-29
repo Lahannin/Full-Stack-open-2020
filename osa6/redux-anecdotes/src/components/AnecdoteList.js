@@ -17,7 +17,7 @@ const AnecdoteList = (props) => {
     
   const orderByVotes = (anecdotes) => {
     return anecdotes.sort((a,b) => {
-    return b.votes - a.votes;
+    return b.votes - a.votes
     })
   }
 

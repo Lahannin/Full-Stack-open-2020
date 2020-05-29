@@ -5,9 +5,9 @@ const notificationReducer = (state = [] , action) => {
       case 'SET_VOTENOTIFICATION':
         return action.data.message
       case 'DELETE_NOTIFICATION':
-            return null;
+            return null
         default:
-            return state;
+            return state
     }
   }
   
