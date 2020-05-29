@@ -16,9 +16,11 @@ export const handleNotification = (message) => {
     return { 
         type: 'SET_NOTIFICATION', 
         data: {
-            message: message}
-      }
-  }
+            message: message
+        }
+    }
+}
+
 
 export const handleVoteNotification = (message) => {
     return dispatch => {
@@ -32,10 +34,8 @@ export const handleVoteNotification = (message) => {
             type: 'DELETE_NOTIFICATION'
         })
     }, 5000)
-    }}
+  }
+}
 
 
-
-
-
-  export default notificationReducer
+export default notificationReducer

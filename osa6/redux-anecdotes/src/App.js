@@ -5,8 +5,8 @@ import Notification from './components/Notification'
 import { useDispatch } from 'react-redux'
 import { initializeAnecdotes } from './reducers/anecdoteReducer'
 
-const App = (props) => {
 
+const App = (props) => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(initializeAnecdotes()) 
@@ -21,5 +21,6 @@ const App = (props) => {
     </div>
   )
 }
+
 
 export default App

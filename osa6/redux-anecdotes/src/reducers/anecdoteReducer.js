@@ -1,5 +1,6 @@
 import anecdoteService from '../services/anecdotes'
 
+
 const reducer = (state = [], action) => {
   switch(action.type) {
     case 'NEW_ANECDOTE':
@@ -15,7 +16,6 @@ const reducer = (state = [], action) => {
       }
       return state.map(anecdote =>
         anecdote.id !== id ? anecdote : changedanecdote)
-        
     default:
       return state
   }
@@ -56,11 +56,8 @@ export const voteAnecdote = (id) => {
       type: 'VOTE_ANECDOTE',
       data: updatedAnecdote
     })
+  }
 }
-}
-
-
-
 
 
 export default reducer

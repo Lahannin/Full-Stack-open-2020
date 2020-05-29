@@ -7,20 +7,21 @@ import anecdoteService from './services/anecdotes'
 
 
 const reducer = combineReducers({
-    anecdotes: anecdoteReducer,
-    notification: notificationReducer
-  })
+  anecdotes: anecdoteReducer,
+  notification: notificationReducer
+  }
+)
   
 
-  const store = createStore(
-    reducer,
-    composeWithDevTools(
-      applyMiddleware(thunk)
-    )
+const store = createStore(
+  reducer,
+  composeWithDevTools(
+    applyMiddleware(thunk)
   )
+)
 
-  anecdoteService.getAll().then(anecdotes =>
-    store.dispatch(initializeAnecdotes(anecdotes))
-  )
+anecdoteService.getAll().then(anecdotes =>
+  store.dispatch(initializeAnecdotes(anecdotes))
+)
   
-  export default store
+export default store
